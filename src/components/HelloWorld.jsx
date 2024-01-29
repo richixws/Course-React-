@@ -1,5 +1,7 @@
 
-export const  HelloWorld = ({user,id, title='Hola Mundo'}) => {
+import PropTypes from 'prop-types';
+
+export const  HelloWorld = ({user,id, title}) => {
 
     //const name='Pepe';
     console.log(title);
@@ -12,7 +14,10 @@ export const  HelloWorld = ({user,id, title='Hola Mundo'}) => {
           </>
 
     )
-    
-    
+}
 
+HelloWorld.PropTypes={
+    title:PropTypes.string.isRequired,
+    id:PropTypes.number.isRequired,
+    user:PropTypes.object.isRequired
 }
